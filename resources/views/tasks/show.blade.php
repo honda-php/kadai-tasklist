@@ -1,23 +1,24 @@
 @extends('layouts.app')
 @section('content')
 <style>
-    form{
+    Form{
         display:inline;
-        margin: 30px;
     }
 </style>
 
     <h2>No{{$task->id}}のタスク詳細ページ</h2>
-    
-        
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <td>{{$task->id}}</td>
+            <td>{{ $task->id }}</td>
+        </tr>
+        <tr>
+            <th>ステータス</th>
+            <td>{{ $task->status }}</td>
         </tr>
         <tr>
             <th>タスク</th>
-            <td>{{$task->content}}</td>
+            <td>{{ $task->content }}</td>
         </tr>
     </table>
     {!! link_to_route('tasks.edit', 'タスクの編集' ,['id'=> $task->id], ['class' =>'btn btn-light']) !!}
