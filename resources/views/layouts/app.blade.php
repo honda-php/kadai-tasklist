@@ -2,30 +2,16 @@
 <html lang="ja">
     <head>
         <meta charset="utf-8">
-        <title>task me</title>
+        <title>MessageBoard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     </head>
 
     <body>
-        <header class="sticky-top">
-            <nav class="navbar navbar-expand-sm navbar-dark bg-info mb-4" >
-                <a href="/" class="navbar-brand">task me</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav-bar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="nav-bar">
-                    <ul class="navbar-nav mr-auto"></ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">{!! link_to_route('tasks.create', 'タスクの追加', [], ['class' => 'nav-link']) !!}</li>
-                    </ul>
-                </div>
-            </nav>
-            </header>
+        @include('commons.navbar')
         
         <div class="container">
-            @include('commons.error_messages')
-            
+            @Include('commons.error_messages')
             @yield('content')
         </div>
         

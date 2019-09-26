@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
+    <h3>タスク一覧</h3>
+
     @if (count($tasks) > 0)
         <table class="table table-striped table-bordered">
             <thead>
