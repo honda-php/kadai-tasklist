@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-   <!-- @if(Auth::check())
+   @if(Auth::check())
      @if(Auth::id() == $user->id)
         @if (count($tasks) > 0)
             <table class="table table-striped table-bordered">
@@ -25,7 +25,7 @@
         @endif
          {!! link_to_route('tasks.create', 'タスクの追加', [], ['class'=>'btn btn-success']) !!}
       @endif
-    @else -->
+    @else 
         <div class="center jumbotron">
             <div class="text-center">
                 <h1>Welcome to the Microposts</h1>
